@@ -130,20 +130,62 @@ const autos = [
 //for 
 for(let i = 0;i< autos.length; i++){
 	if(autos[i].color === 'Negro'){
-		console.log(autos[i]);
+		//console.log(autos[i]);
 	}
 }
 
 // forEach
+//declarar variable para guardar resultado 
+let resultado = [];
+//recorrer arreglo auto  utilizando forEach1 1 
+autos.forEach( auto =>{
+	if(auto.color === 'Negro'){
+		//subida al arreglo de los resultados de la condicion 
+		resultado.push(auto)
+	}
+})
+
+console.log(resultado);
 
 // map
+//ventaja del map crea un arreglo a diferencia del forEach
+let resultadoMap = autos.map( auto =>{
+	if(auto.color === 'Rojo')
+	{
+		return auto;
+	}
+
+})
+
+console.log(resultadoMap)
 
 // filter
 
+let filter = autos.filter(auto => {return auto.year >2015 && auto.year <2020 })
+
+console.log(filter);
+
 // find
+//find traer el primer valor que encuentra 
+
+let find =  autos.find( auto => auto.color === 'Rojo');
+
+console.log(find);
+
 
 // reduce
+//se usa para operaciones retorna un valor unico
+
+let reduce = autos.reduce((total,auto)=> total + auto.precio ,0 )
+
+console.log(reduce);
 
 // some
+//retorna true o false 
+
+let some = autos.some(auto => auto.marca === 'BMW');
+
+console.log(some);
+
 
 
