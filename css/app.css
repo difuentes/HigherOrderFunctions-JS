@@ -14,9 +14,13 @@ h1 {
 p {
     font-size: 2rem;
 }
-h1, p {
+h1 {
     text-align: center;
-    color :white;
+    color :black;
+}
+p{
+    text-align: center;
+    color :black;
 }
 #app, 
 form {
@@ -54,3 +58,4 @@ form {
 .error {
     background-color: red;
 }
+
